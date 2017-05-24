@@ -1,0 +1,28 @@
+{
+  "name": "startos-nodejs-runtime",
+  "version": "0.1.0",
+  "author": "Trevor Du",
+  "contributors": [
+    {
+      "name": "Trevor Du",
+      "email": "4963636@qq.com"
+    }
+  ],
+  "description": "NodeJS run container for the startos framework",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "dependencies": {
+    "body-parser": "",
+    "co": "~4.6.0",
+    "express": "",
+    "morgan": "",
+    "mz": "~2.1.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.3",
+    "underscore": ">=1.8.3"
+  },
+  "scripts": {
+    "test": "npm test"
+  }
+}
