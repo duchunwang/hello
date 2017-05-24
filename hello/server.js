@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
 
-myapp(router);
+//myapp(router);
 
 // 转到子系统
 app.get('/', function(req,res){
