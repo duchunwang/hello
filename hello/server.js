@@ -6,8 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-const myapp = require('./app');
-const router = express.Router();
+//const myapp = require('./app');
+//const router = express.Router();
 
 // Request logger
 app.use(morgan('combined'))

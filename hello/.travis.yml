@@ -1,5 +1,17 @@
-language: node_js
+sudo: required
 
-node_js:
-   - 7
+services:
+  - docker
 
+before_install:
+  - export BUILD_ID=${TRAVIS_COMMIT::8}
+  - export REPO_SERVER=registry.cn-hangzhou.aliyuncs.com
+  - export BASE_REPO=$REPO_SERVER/duchunwang/hello
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_TAG ; fi`
+  - docker build -t $BASE_REPO:$BUILD_ID .
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" $REPO_SERVER
+  - docker tag $BASE_REPO:$BUILD_ID $BASE_REPO:$TAG
+  - docker push $BASE_REPO:$TAG
+
+script:
+  - docker images
