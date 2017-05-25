@@ -7,4 +7,4 @@ RUN npm install
 
 ADD server.js /usr/src/
 
-EXPOSE 80
+EXPOSE 80 
