@@ -15,5 +15,3 @@ before_install:
 
 script:
   - docker images
-
-.travis.yml, using standard configuration.
