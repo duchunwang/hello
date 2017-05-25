@@ -7,4 +7,6 @@ RUN npm install
 
 ADD server.js /usr/src/
 
+ENTRYPOINT node server.js
+
 EXPOSE 80 
